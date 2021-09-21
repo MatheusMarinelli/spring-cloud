@@ -1,0 +1,13 @@
+server:
+  port: 9000
+
+# add the application name to register thia application on eureka-server
+spring:  application:    name: 'client'
+
+# eureka client configs
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

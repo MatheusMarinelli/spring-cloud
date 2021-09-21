@@ -1,0 +1,14 @@
+# config-server default port
+server:  port: 8888
+
+# config-server configs
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+          native:
+          # the client config is inside {application name} folder
+          # which is inside config folder            search-locations: classpath:/config/{application} 
+          

@@ -1,0 +1,7 @@
+Call services by gateway
+
+1) Open Postman or other api test app
+2) Select HTTP protocol
+3) On URL field write that "http://localhost:<gateway_port>/<predicate_path>/<endpoint>"
+
+** On my example I have the path "/math/**"

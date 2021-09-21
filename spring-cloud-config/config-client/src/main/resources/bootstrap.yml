@@ -1,0 +1,7 @@
+# bootstrap file contains the necessary configs to get
+# the full configs on config-server 
+spring:
+  application:
+    name: 'client'
+  profiles:    active: prod
+  cloud:    config:      uri: http://localhost:8888
