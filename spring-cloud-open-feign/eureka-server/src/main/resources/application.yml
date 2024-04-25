@@ -1,7 +1,22 @@
+spring:
+  application:
+    name: 'eureka-server'
+
 # eureka default port
 server:
   port: 8761
   
 # eureka server configs
-eureka:  client:    fetch-registry: false
-    register-with-eureka: false
+eureka:
+  client:
+    fetch-registry: false # controls if Eureka should retrieve all services registered on eureka server
+    register-with-eureka: false # controls if service should or should not register on eureka server
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
