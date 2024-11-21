@@ -1,8 +1,10 @@
 server:
-  port: 9000
+  port: 0 # random port
 
 # add the application name to register thia application on eureka-server
-spring:  application:    name: 'client'
+spring:
+  application:
+    name: 'client'
 
 # eureka client configs
 eureka:
