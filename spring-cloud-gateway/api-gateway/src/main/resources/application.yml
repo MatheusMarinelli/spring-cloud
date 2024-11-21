@@ -1,12 +1,20 @@
 server:
   port: 5555
   
-spring:  application:    name: gateway
-  cloud:    gateway:      discovery:        locator:          enabled: true
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # enable to locate other applications in the same environment through their 'spring.application.name' property
+          lowerCaseServiceId: true # register applications with its lower case names
       routes:
       - id: calculator
         uri: http://localhost:9001
-        predicates:        - Path=/math/**
+        predicates:
+        - Path=/math/**
   
 eureka:
   client:
