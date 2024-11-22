@@ -20,3 +20,12 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      sum:
+        slidingWindowSize: 3 # It is based on the last 3 requests to build the statistics for the open or closed state
+        minimumNumberOfCalls: 2 # Defines the number of requests before transitioning to the open state
+        waitDurationInOpenState: 10s # Defines the amount of time the service will remain in the open state before transitioning to half-open
